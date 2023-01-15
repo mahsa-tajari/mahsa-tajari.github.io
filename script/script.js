@@ -13,23 +13,23 @@ function openingOptionsHandler (icon){
 
     if(style.display === 'none'){
         collapsedMenuElm.style.display = 'flex'
-        arrowElm.src = 'file:///E:/project/project2/images/icon-arrow-up.svg'
+        arrowElm.src = 'images/icon-arrow-up.svg'
     }
     else{
         collapsedMenuElm.style.display = 'none'
-        arrowElm.src = 'file:///E:/project/project2/images/icon-arrow-down.svg'
+        arrowElm.src = 'images/icon-arrow-down.svg'
     }
 }
 
 function openingMenuHandler(){
     if(!isMenuOpen){
         navMenu.classList.add('nav-menu--open')
-        navIconImgElm.src = 'file:///E:/project/project2/images/icon-close-menu.svg'
+        navIconImgElm.src = 'images/icon-close-menu.svg'
         isMenuOpen = true
     }
     else {
         navMenu.classList.remove('nav-menu--open')
-        navIconImgElm.src = 'file:///E:/project/project2/images/icon-menu.svg'
+        navIconImgElm.src = 'images/icon-menu.svg'
         isMenuOpen = false
     }
 }
