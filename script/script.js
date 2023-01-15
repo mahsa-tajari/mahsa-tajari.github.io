@@ -13,23 +13,23 @@ function openingOptionsHandler (icon){
 
     if(style.display === 'none'){
         collapsedMenuElm.style.display = 'flex'
-        arrowElm.src = 'images/icon-arrow-up.svg'
+        arrowElm.src = 'https://raw.githubusercontent.com/mahsa-tajari/mahsa-tajari.github.io/main/images/icon-arrow-up.svg'
     }
     else{
         collapsedMenuElm.style.display = 'none'
-        arrowElm.src = 'mahsa-tajari.github.io/images/icon-arrow-down.svg'
+        arrowElm.src = 'https://raw.githubusercontent.com/mahsa-tajari/mahsa-tajari.github.io/main/images/icon-arrow-down.svg'
     }
 }
 
 function openingMenuHandler(){
     if(!isMenuOpen){
         navMenu.classList.add('nav-menu--open')
-        navIconImgElm.src = 'images/icon-close-menu.svg'
+        navIconImgElm.src = 'https://raw.githubusercontent.com/mahsa-tajari/mahsa-tajari.github.io/main/images/icon-close-menu.svg'
         isMenuOpen = true
     }
     else {
         navMenu.classList.remove('nav-menu--open')
-        navIconImgElm.src = 'images/icon-menu.svg'
+        navIconImgElm.src = 'https://raw.githubusercontent.com/mahsa-tajari/mahsa-tajari.github.io/main/images/icon-menu.svg'
         isMenuOpen = false
     }
 }
