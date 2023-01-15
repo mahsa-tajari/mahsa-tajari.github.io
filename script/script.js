@@ -17,7 +17,7 @@ function openingOptionsHandler (icon){
     }
     else{
         collapsedMenuElm.style.display = 'none'
-        arrowElm.src = 'images/icon-arrow-down.svg'
+        arrowElm.src = 'mahsa-tajari.github.io/images/icon-arrow-down.svg'
     }
 }
 
