@@ -1,0 +1,34 @@
+@media (min-width :576px){
+    
+}
+@media (min-width :768px){
+   
+    .nav-icon__img{
+        display: none;
+    }
+    .nav-menu{
+        flex-direction: row;
+        position: unset;
+        margin-top: 0;
+    }
+    .menu{
+        flex-direction: row;
+    }
+    .header__links{
+        flex-direction: row;
+        
+    }
+    .header__link{
+        padding: 0;
+    }
+    
+}
+@media (min-width :992px){
+   
+}
+@media (min-width :1200px){
+    
+}
+@media (min-width :1400px){
+   
+}
