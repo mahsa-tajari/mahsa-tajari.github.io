@@ -35,8 +35,8 @@ function openingMenuHandler(){
 }
 
 menuItemElm.forEach(element => {
-    element.addEventListener('touchend',function(){
+    element.addEventListener('click',function(){
         openingOptionsHandler(element)
     })
 });
-navIcon.addEventListener('touchend',openingMenuHandler)
+navIcon.addEventListener('click',openingMenuHandler)
