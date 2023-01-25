@@ -56,7 +56,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex-basis: 125rem;
+    flex-basis: 100%;
     background-color: #fff;
     padding: 1.5rem 1.5rem 0 1.5rem;
     position: fixed;
