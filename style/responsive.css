@@ -1,34 +1,56 @@
 @media (min-width :576px){
-    
+    .main-footer{
+        max-width: 40rem;
+    }
 }
 @media (min-width :768px){
+    .main-footer{
+        max-width: 50rem;
+    }
+}
+
+@media (min-width :992px){/* in this size,sidebar can be open */
+    
+    .sidebar-wrapper{
+        display: none;
+    }
+    .nav-menu--desktop{
+        display: flex;
+    }
+    
+    /* ============================
+                Header
+       ============================*/
     .nav-icon{
         display: none;
     }
+    .nav-app__logo {
+        max-width: 7rem;
+        display: block;
+        padding-top: 0.8rem;
+    }
     .nav-menu{
         flex-direction: row;
-        flex-basis: 120rem;
         justify-content: space-between;
+        align-items: baseline;
         position: unset;
         margin-top: 0;
         padding: 0;
     }
     .menu{
         flex-direction: row;
+        justify-content: center;
+        max-width: 50rem;
     }
     .menu__item{
         margin-left: 3rem;
         cursor: pointer;
     }
-    .menu__colapsed-items{
+    .menu__item:hover > .menu__colapsed-items{
+        display: flex;
         position: fixed;
-        top: auto;
-        left: auto;
         box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px 0px;
-        padding-right: 2.5rem;
-        margin-top: 1.5rem;
-        min-width: 15rem;
-    }
+        padding-right: 2.5rem;  
     }
     .header__links{
         flex-direction: row;
@@ -39,13 +61,74 @@
         display: flex;
         align-items: center;
     }
-    
+    .menu__close-icon{
+        display: none;
+    }
+    /* =================== */
+    /*main*/
+    /* =================== */
+    .main-header{
+        padding: 2rem 10rem;
+    }   
+    .main-wrapper{
+        margin-top: 12rem;
+    }
+    .main-body__desc{
+        max-width: 55rem;
+        margin: 3rem 0;
+    }
+    .main-footer{
+        max-width: 60rem;
+    }
 }
-@media (min-width :992px){
-   
-}
+/* desktop */
 @media (min-width :1200px){
-    
+    .main-wrapper{
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        margin-top: 5rem;
+        max-width: 105rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-header{
+        max-width: 50rem;
+        margin-top: 0; 
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .main-body{
+        padding-right: 15rem;
+        margin-top: 10rem;
+        align-items:flex-start;
+     }
+     .main-body__title{
+        font-size:7rem;
+        text-align: left;
+        line-height: 8rem;
+    }
+     .main-body__desc{
+        text-align: left;
+         max-width: 150rem;
+         font-size: 1.8rem;
+         min-height: 10rem; 
+        min-width: 48rem;
+        margin-top: 5rem;
+    }
+     .main-body__link{
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+    .main-header__mobile{
+        display: none;
+    }
+     .main-header__desktop{
+        display: block;
+    } 
+     .main-header{
+        padding: 0;
+    }
 }
 @media (min-width :1400px){
    
