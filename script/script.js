@@ -43,5 +43,5 @@ menuItemElm.forEach(element => {
         openingOptionsHandler(element)
     })
 });
-navIcon.addEventListener('click',openingMenuHandler)
-menuClose.addEventListener('click',openingMenuHandler)
+navIcon.addEventListener('touchout',openingMenuHandler)
+menuClose.addEventListener('touchout',openingMenuHandler)
