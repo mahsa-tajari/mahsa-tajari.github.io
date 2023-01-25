@@ -197,15 +197,6 @@ body{
     width: 100%;
 }
 .main-footer__logo{
-    width: 7rem;
-    height: 1.5rem;
+    object-fit:contain;
 }
-.audiophile{
-    width: 6rem;
-    height: 3rem;
-}
-.attribution{
-    text-align: center;
-    padding: 2rem;
-    font-size: 1.4rem;
 }
