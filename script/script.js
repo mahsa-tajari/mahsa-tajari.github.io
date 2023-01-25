@@ -43,5 +43,5 @@ menuItemElm.forEach(element => {
         openingOptionsHandler(element)
     })
 });
-navIcon.addEventListener('touchstart',openingMenuHandler)
-menuClose.addEventListener('touchstart',openingMenuHandler)
+navIcon.addEventListener('click',openingMenuHandler)
+menuClose.addEventListener('click',openingMenuHandler)
