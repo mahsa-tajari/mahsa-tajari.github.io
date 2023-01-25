@@ -7,7 +7,6 @@ const navIcon = $.querySelector('.nav-icon')
 let isMenuOpen = false
 let navIconImgElm = $.querySelector('.nav-icon__img')
 let sidebarWrapperElm = $.querySelector('.sidebar-wrapper')
-let header = $.querySelector('html')
 //functions
 //function for openin/closing an item
 function openingOptionsHandler (icon){
