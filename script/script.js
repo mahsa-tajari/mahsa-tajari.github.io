@@ -1,42 +1,48 @@
+//variables
 const $ = document 
 const menuItemElm = $.querySelectorAll('.menu__item')
-const menuClose = $.querySelector('.menu__close')
-const navMenu = $.querySelector('.nav-menu')
+const menuClose = $.querySelector('.menu__close-icon')
+const navMenu = $.querySelector('.nav-menu--mobile')
 const navIcon = $.querySelector('.nav-icon')
 let isMenuOpen = false
 let navIconImgElm = $.querySelector('.nav-icon__img')
-
+let sidebarWrapperElm = $.querySelector('.sidebar-wrapper')
+let header = $.querySelector('html')
+//functions
+//function for openin/closing an item
 function openingOptionsHandler (icon){
-    let collapsedMenuElm = icon.firstElementChild.nextElementSibling.nextElementSibling;
-    let arrowElm = icon.firstElementChild.nextElementSibling
-    let style = window.getComputedStyle(collapsedMenuElm)
-
-    if(style.display === 'none'){
-        collapsedMenuElm.style.display = 'flex'
-        arrowElm.src = 'https://raw.githubusercontent.com/mahsa-tajari/mahsa-tajari.github.io/main/images/icon-arrow-up.svg'
+    let collapsedMenuElm = icon.firstElementChild.nextElementSibling.nextElementSibling;//select div of options of item that clicked on that
+    let arrowElm = icon.firstElementChild.nextElementSibling //select icon open or close: ^
+    let style = window.getComputedStyle(collapsedMenuElm) //styles of div 
+    if(style.display === 'none'){ //if div is hide
+        collapsedMenuElm.style.display = 'flex' //show it
+        arrowElm.src = './images/icon-arrow-up.svg' //change arrow
     }
     else{
-        collapsedMenuElm.style.display = 'none'
-        arrowElm.src = 'https://raw.githubusercontent.com/mahsa-tajari/mahsa-tajari.github.io/main/images/icon-arrow-down.svg'
+        collapsedMenuElm.style.display = 'none' //if div is showing, hide it
+        arrowElm.src = './images/icon-arrow-down.svg' //change arrow
     }
 }
-
+//function for opening/closing sidebar
 function openingMenuHandler(){
-    if(!isMenuOpen){
-        navMenu.classList.add('nav-menu--open')
-        navIconImgElm.src = 'https://raw.githubusercontent.com/mahsa-tajari/mahsa-tajari.github.io/main/images/icon-close-menu.svg'
-        isMenuOpen = true
+    if(!isMenuOpen){ // if sidebar is closed
+        navMenu.classList.add('nav-menu--open') //add class with styles that show the sidebar
+        navIconImgElm.style.display = 'none' //hide the openining  sidebar icon
+        sidebarWrapperElm.classList.add('sidebar-wrapper--active')//blackcolor for background
+        isMenuOpen = true //sidebar is open
     }
-    else {
-        navMenu.classList.remove('nav-menu--open')
-        navIconImgElm.src = 'https://raw.githubusercontent.com/mahsa-tajari/mahsa-tajari.github.io/main/images/icon-menu.svg'
-        isMenuOpen = false
+    else { //sidebar is open
+        navMenu.classList.remove('nav-menu--open') //close it
+        navIconImgElm.style.display = 'inline'//show opening sidebar icon
+        sidebarWrapperElm.classList.remove('sidebar-wrapper--active')  
+        isMenuOpen = false //side bar is closed
     }
 }
-
+//add eventlisteners
 menuItemElm.forEach(element => {
     element.addEventListener('click',function(){
         openingOptionsHandler(element)
     })
 });
 navIcon.addEventListener('click',openingMenuHandler)
+menuClose.addEventListener('click',openingMenuHandler)
